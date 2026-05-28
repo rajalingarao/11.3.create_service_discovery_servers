@@ -7,14 +7,14 @@ git clone https://github.com/rajalingarao/11.3.create_service_discovery_servers.
 
 cd 11.3.create_service_discovery_servers
 
-echo "*************Installing node_exporter *************"
+echo "*************Installing node_exporter -start*************"
 sudo sh node_exporter/node_exporter.sh || exit 1
 echo "************node_exporter-done**************************"
 
 echo "All installations completed successfully."
 
-echo "**************************************"
+echo "***********node_exporter status - start**************"
 sudo systemctl status node_exporter
-echo "**************************************"
+echo "***********node_exporter status - done****************"
 sudo netstat -lntp
 echo "**************************************"
