@@ -9,7 +9,7 @@ resource "aws_instance" "sd_ec2" {
         delete_on_termination = true
     }
     user_data = file("${path.module}/install_service_discover.sh")
-    iam_instance_profile        = aws_iam_instance_profile.prometheus_instance_profile.name
+    # iam_instance_profile        = aws_iam_instance_profile.prometheus_instance_profile.name
     
     # user_data = <<-EOF
     #         #!/bin/bash
